@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicidad en Autobús</title>
+  <link rel="stylesheet" href="style.css">
+  <title> Director Comercial | Alejandro Flores</title>
+  <script src="controles.js" defer></script>
+  
+</head>
+<body>
+    <h1>Simulador de Publicidad en Autobús</h1>
+    <div class="instructions">
+        <h3>Instrucciones:</h3>
+        <ol>
+            <li>Sube tu diseño publicitario (JPG, PNG o WebP)</li>
+            <li>Ajusta el tamaño y posición con los controles</li>
+            <li>Puedes arrastrar la imagen para colocarla exactamente</li>
+        </ol>
+    </div>
+    
+    <div class="upload-container" id="dropzone">
+        <div class="upload-icon">🚌</div>
+        <h3>Sube tu diseño publicitario</h3>
+        <p>Arrastra y suelta tu imagen aquí o</p>
+        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" style="display: none;">
+        <button class="upload-btn" id="uploadBtn">Seleccionar Archivo</button>
+    </div>
+    
+    <div class="preview-container">
+        <div class="bus-container">
+            <!-- Reemplaza esta URL con tu imagen de autobús -->
+            <img src="assets/bus image.png" alt="Autobús para publicidad lateral" class="bus-image">
+            <div class="ad-space">
+                <div class="ad-content" id="adContent">
+                    <img id="uploadedImage" class="uploaded-image" style="display: none;">
+                    <p id="placeholder-text">Tu publicidad aparecerá aquí</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label class="control-label">Nivel de Zoom</label>
+            <div class="slider-container">
+                <input type="range" id="zoomSlider" min="10" max="200" value="100">
+                <span id="zoomValue">100%</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label class="control-label">Controles de Imagen</label>
+            <div class="btn-group">
+                <button class="control-btn" id="rotateLeft">Rotar Izquierda</button>
+                <button class="control-btn reset-btn" id="resetPosition">Reiniciar</button>
+                <button class="control-btn" id="rotateRight">Rotar Derecha</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+</body>
+</html>
